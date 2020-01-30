@@ -27,7 +27,7 @@ public class Aluno {
 	private String dataNasc;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("aluno")
+	@JsonIgnoreProperties("alunos")
 	private Curso curso;
 	
  
@@ -60,6 +60,12 @@ public class Aluno {
 	}
 	public void setDataNasc(String dataNasc) {
 		this.dataNasc = dataNasc;
+	}
+	public Curso getCurso() {
+		return curso;
+	}
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
  
  

@@ -22,4 +22,9 @@ public class AlunoServiceImpl implements IAlunoService{
 	public Aluno recuperarAlunoId(int id) {
 		return repo.findById(id).get();
 	}
+	@Override
+	public void novoAluno(Aluno aluno) {
+		repo.save(aluno);
+	}
+	
 }
